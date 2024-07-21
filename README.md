@@ -10,7 +10,9 @@ Duration: JULY 10th, 2024 to SEPTEMBER 10th, 2024
 
 Mentor: N. SANTHOSH
 
-Overview of the Project
+
+
+OVWEVIEW OF THE PROJECT
 
 Project: Exploratory Data Analysis (EDA) of Iris Dataset
 
@@ -39,6 +41,9 @@ Findings:
 •	Boxplots aided in detecting potential outliers, requiring further analysis or justification.
 
 •	Histograms and scatter plots visually displayed the distributions and relationships between features.
+
+
+
 
 Screenshots are available in the folder 'SCREENSHOTS'
 
