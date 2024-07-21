@@ -1,13 +1,21 @@
 Name: ANJANA RAJEEV
+
 Company: CODETECH IT SOLUTIONS
+
 ID: CT8DS1786
+
 Domain: DATA SCIENCE
+
 Duration: JULY 10th, 2024 to SEPTEMBER 10th, 2024
+
 Mentor: N. SANTHOSH
 
 Overview of the Project
+
 Project: Exploratory Data Analysis (EDA) of Iris Dataset
+
 Objective:
+
 The objective of this project was to gain a deep understanding of the Iris dataset through Exploratory Data Analysis (EDA). This involved uncovering the data's characteristics, distributions, relationships between variables, and potential outliers to inform further analysis and decision-making.
 
 Methodologies used:
