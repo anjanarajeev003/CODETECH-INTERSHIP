@@ -45,4 +45,4 @@ Findings:
 
 
 
-----------------------------------------------------Screenshots are available in the folder 'SCREENSHOTS'----------------------------------------------------
+--------------------------------------------Screenshots are available in the folder 'SCREENSHOTS'--------------------------------------------
