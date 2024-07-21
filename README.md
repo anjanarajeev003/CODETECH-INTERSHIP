@@ -12,7 +12,7 @@ Mentor: N. SANTHOSH
 
 
 
-OVWEVIEW OF THE PROJECT
+---------------------OVERVIEW OF THE PROJECT-------------------------
 
 Project: Exploratory Data Analysis (EDA) of Iris Dataset
 
@@ -45,5 +45,5 @@ Findings:
 
 
 
-Screenshots are available in the folder 'SCREENSHOTS'
+-----------------Screenshots are available in the folder 'SCREENSHOTS'--------------------
 
