@@ -1,0 +1,58 @@
+import numpy as np
+import pandas as pd
+
+df=pd.read_csv('Mall_Customers.csv')
+print(df.head())
+print(df.isnull().sum())
+
+from sklearn.cluster import KMeans
+km = KMeans(n_clusters = 3)
+y_predicted = km.fit_predict(df[["Age", "Annual Income (k$)"]])
+y_predicted
+
+from matplotlib import pyplot as plt
+df["Cluster"] = y_predicted
+
+km.cluster_centers_
+
+df1 = df[df.Cluster==0]
+df2 = df[df.Cluster==1]
+df3 = df[df.Cluster==2]
+plt.scatter(df1.Age, df1["Annual Income (k$)"], color = "green", label = "Cluster 0")
+plt.scatter(df2.Age, df2["Annual Income (k$)"], color = "red", label = "Cluster 1")
+plt.scatter(df3.Age, df3["Annual Income (k$)"], color = "purple", label = "Cluster 2")
+plt.scatter(km.cluster_centers_[:, 0], km.cluster_centers_[:, 1], color = "black", marker = "*", label = "centroid")
+plt.xlabel("Age")
+plt.ylabel("Annual Income (k$)")
+plt.title("K-Means Clustering of Age vs Annual Income")
+plt.legend()
+plt.show()
+
+# Compute silhouette score - K MEANS
+from sklearn.metrics import silhouette_score
+silhouette_avg = silhouette_score(df[["Age", "Annual Income (k$)"]], y_predicted)
+print("K-Means Silhouette Score: ",silhouette_avg)
+
+
+from sklearn.cluster import AgglomerativeClustering
+hierarchical = AgglomerativeClustering(n_clusters=3)
+h_y_predicted = hierarchical.fit_predict(df[["Age", "Annual Income (k$)"]])
+h_y_predicted
+
+df["H_Cluster"] = h_y_predicted
+
+df1 = df[df.H_Cluster == 0]
+df2 = df[df.H_Cluster == 1]
+df3 = df[df.H_Cluster == 2]
+
+plt.scatter(df1.Age, df1["Annual Income (k$)"], color="green", label="Cluster 0")
+plt.scatter(df2.Age, df2["Annual Income (k$)"], color="red", label="Cluster 1")
+plt.scatter(df3.Age, df3["Annual Income (k$)"], color="purple", label="Cluster 2")
+plt.xlabel("Age")
+plt.ylabel("Annual Income (k$)")
+plt.title("Hierarchical Clustering of Age vs Annual Income")
+plt.legend()
+
+# Compute silhouette score - Hierarchical
+h_silhouette_avg = silhouette_score(df[["Age", "Annual Income (k$)"]], h_y_predicted)
+print("Hierarchical Clustering Silhouette Score: ",h_silhouette_avg)
